@@ -1,4 +1,4 @@
-const reveals = document.querySelectorAll('.reveal');
+const items = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -7,13 +7,13 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-reveals.forEach((el) => observer.observe(el));
+items.forEach((item) => observer.observe(item));
 
-const progress = document.querySelector('.progress span');
-const updateProgress = () => {
+const progress = document.querySelector('.scroll-progress span');
+function updateProgress() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
-  const value = max > 0 ? (window.scrollY / max) * 100 : 0;
-  progress.style.width = `${Math.min(100, Math.max(0, value))}%`;
-};
+  const current = max > 0 ? (window.scrollY / max) * 100 : 0;
+  progress.style.width = `${Math.min(100, Math.max(0, current))}%`;
+}
 window.addEventListener('scroll', updateProgress, { passive: true });
 updateProgress();
