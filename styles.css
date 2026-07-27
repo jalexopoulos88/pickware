@@ -3,87 +3,146 @@
 @media(max-width:900px){.topbar nav{display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-side{padding:70px 25px 55px}.portrait{width:230px}.hero-main{padding:70px 25px 90px}.split-copy,.cards,.competencies,.days,.contact{grid-template-columns:1fr}.section{padding:80px 24px}.section-label{align-items:flex-start}.section-label h2{font-size:1rem;line-height:1.5}.contact-image{padding:70px 25px}.contact-copy{padding:70px 25px}.competencies{gap:12px;background:transparent;border:0}.competencies article{border:1px solid var(--line)}footer{gap:12px;flex-direction:column}}
 @media(max-width:520px){h1{font-size:3rem}.hero-role{font-size:.85rem;line-height:1.8}.button{width:100%}.card{padding:25px}.card .tag{top:24px;right:20px}.section-label span{width:44px;height:44px;flex:0 0 44px}.section-label h2{padding:9px 13px}.lead{font-size:1.75rem}}
 
+/* Pickware profile match – ruhig und passend zum Lebenslauf */
+.match-section{overflow:hidden;background:var(--paper)}
+.match-intro{margin-bottom:3.4rem}
+.bubble-cloud{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  padding:18px 0 10px;
+}
+.skill-bubble{
+  appearance:none;
+  position:relative;
+  border:1px solid var(--ink);
+  border-radius:50%;
+  background:var(--paper);
+  color:var(--ink);
+  font:inherit;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  transition:transform .2s ease, background .2s ease, color .2s ease;
+  box-shadow:none;
+}
+.skill-bubble::after{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border:1px solid rgba(17,17,17,.14);
+  border-radius:50%;
+  pointer-events:none;
+}
+.skill-bubble:hover,.skill-bubble:focus-visible,.skill-bubble.active{
+  transform:translateY(-3px);
+  outline:none;
+}
+.skill-bubble span{
+  max-width:88%;
+  font-weight:600;
+  letter-spacing:.06em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+.skill-bubble small{
+  max-width:86%;
+  margin-top:7px;
+  font-size:.66rem;
+  line-height:1.4;
+  letter-spacing:.04em;
+  opacity:.72;
+}
+.skill-bubble em{
+  position:absolute;
+  left:50%;
+  bottom:-46px;
+  width:210px;
+  transform:translate(-50%,6px);
+  background:var(--paper);
+  color:var(--ink);
+  border:1px solid var(--line);
+  padding:9px 11px;
+  font-size:.68rem;
+  line-height:1.45;
+  font-style:normal;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease;
+  z-index:5;
+}
+.skill-bubble:hover em,.skill-bubble:focus-visible em,.skill-bubble.active em{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+.skill-bubble.matched{
+  background:var(--taupe);
+  border-color:var(--taupe-dark);
+}
+.skill-bubble.matched:nth-child(2),
+.skill-bubble.matched:nth-child(5),
+.skill-bubble.matched:nth-child(8){
+  background:var(--ink);
+  color:#fff;
+  border-color:var(--ink);
+}
+.skill-bubble.matched:nth-child(2)::after,
+.skill-bubble.matched:nth-child(5)::after,
+.skill-bubble.matched:nth-child(8)::after{
+  border-color:rgba(255,255,255,.3);
+}
+.skill-bubble.partial{
+  background:transparent;
+  border:1px dashed var(--taupe-dark);
+}
+.skill-bubble.partial::after{border-style:dashed}
+.bubble-xl{width:224px;height:224px}
+.bubble-lg{width:194px;height:194px}
+.bubble-md{width:166px;height:166px}
+.bubble-sm{width:136px;height:136px;padding:15px}
+.bubble-xl span{font-size:1.25rem}
+.bubble-lg span{font-size:1.04rem}
+.bubble-md span{font-size:.84rem}
+.bubble-sm span{font-size:.7rem}
+.match-legend{
+  display:flex;
+  justify-content:center;
+  gap:26px;
+  flex-wrap:wrap;
+  margin-top:44px;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.match-legend span{display:flex;align-items:center;gap:9px}
+.dot{width:13px;height:13px;border-radius:50%;display:inline-block}
+.matched-dot{background:var(--taupe);border:1px solid var(--taupe-dark)}
+.partial-dot{background:transparent;border:1px dashed var(--taupe-dark)}
 
-/* Pickware profile match */
-.match-section { overflow: hidden; }
-.match-intro { margin-bottom: 2.8rem; }
-.bubble-cloud {
-  position: relative;
-  min-height: 620px;
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding: 32px 12px;
-}
-.skill-bubble {
-  appearance: none;
-  border: 1px solid rgba(38, 30, 35, .14);
-  border-radius: 999px;
-  font: inherit;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 24px;
-  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
-  box-shadow: 0 12px 34px rgba(38, 30, 35, .08);
-  position: relative;
-}
-.skill-bubble:hover, .skill-bubble:focus-visible, .skill-bubble.active {
-  transform: translateY(-6px) scale(1.025);
-  box-shadow: 0 18px 42px rgba(38, 30, 35, .16);
-  z-index: 3;
-  outline: none;
-}
-.skill-bubble span { font-weight: 700; letter-spacing: .02em; line-height: 1.15; }
-.skill-bubble small { margin-top: 7px; font-size: .72rem; line-height: 1.35; opacity: .78; }
-.skill-bubble em {
-  position: absolute;
-  left: 50%;
-  bottom: -54px;
-  width: 220px;
-  transform: translate(-50%, 8px);
-  background: #171417;
-  color: #fff;
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: .72rem;
-  line-height: 1.35;
-  font-style: normal;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s ease, transform .2s ease;
-}
-.skill-bubble:hover em, .skill-bubble:focus-visible em, .skill-bubble.active em { opacity: 1; transform: translate(-50%, 0); }
-.skill-bubble.matched { background: #c7bbb5; color: #181416; }
-.skill-bubble.partial { background: #f4f0ed; color: #272127; border-style: dashed; }
-.bubble-xl { width: 245px; height: 245px; }
-.bubble-lg { width: 210px; height: 210px; }
-.bubble-md { width: 175px; height: 175px; }
-.bubble-sm { width: 145px; height: 145px; padding: 18px; }
-.bubble-xl span { font-size: 1.55rem; }
-.bubble-lg span { font-size: 1.25rem; }
-.bubble-md span { font-size: 1rem; }
-.bubble-sm span { font-size: .84rem; }
-.match-legend { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 18px; font-size: .82rem; }
-.match-legend span { display: flex; align-items: center; gap: 8px; }
-.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-.matched-dot { background: #c7bbb5; }
-.partial-dot { background: #f4f0ed; border: 1px dashed #6d6265; }
-
-@media (max-width: 760px) {
-  .bubble-cloud { min-height: auto; gap: 12px; padding: 18px 0 56px; }
-  .bubble-xl { width: 176px; height: 176px; }
-  .bubble-lg { width: 160px; height: 160px; }
-  .bubble-md { width: 146px; height: 146px; }
-  .bubble-sm { width: 130px; height: 130px; }
-  .skill-bubble { padding: 16px; }
-  .skill-bubble em { position: fixed; left: 16px; right: 16px; bottom: 18px; width: auto; transform: translateY(8px); z-index: 20; }
-  .skill-bubble:hover em, .skill-bubble:focus-visible em, .skill-bubble.active em { transform: translateY(0); }
+@media(max-width:760px){
+  .bubble-cloud{gap:10px;padding-bottom:48px}
+  .bubble-xl{width:170px;height:170px}
+  .bubble-lg{width:154px;height:154px}
+  .bubble-md{width:142px;height:142px}
+  .bubble-sm{width:126px;height:126px}
+  .skill-bubble{padding:14px}
+  .skill-bubble span{letter-spacing:.04em}
+  .skill-bubble em{
+    position:fixed;
+    left:16px;
+    right:16px;
+    bottom:18px;
+    width:auto;
+    transform:translateY(8px);
+    z-index:30;
+  }
+  .skill-bubble:hover em,.skill-bubble:focus-visible em,.skill-bubble.active em{transform:translateY(0)}
 }
