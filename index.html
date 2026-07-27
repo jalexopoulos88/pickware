@@ -2,86 +2,94 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Bewerbung von Jessica Alexopoulos als Senior Digital Marketing Managerin bei Pickware.">
   <title>Jessica Alexopoulos × Pickware</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="progress" aria-hidden="true"><span></span></div>
-  <header class="site-header">
-    <a class="brand" href="#start" aria-label="Zum Seitenanfang"><span class="brand-mark">JA</span><span>Jessica Alexopoulos</span></a>
-    <nav aria-label="Seitennavigation"><a href="#warum">Warum Pickware</a><a href="#match">Match</a><a href="#themen">Themen</a><a href="#arbeitsweise">Arbeitsweise</a></nav>
-    <a class="header-cta" href="#kontakt">Kontakt</a>
+  <header class="header">
+    <a class="brand" href="#start"><span class="brand-mark">JA</span><span>Jessica Alexopoulos</span></a>
+    <nav>
+      <a href="#warum">Warum Pickware</a>
+      <a href="#match">Match</a>
+      <a href="#ideen">Ideen</a>
+      <a href="#arbeitsweise">Arbeitsweise</a>
+    </nav>
+    <a class="contact-link" href="#kontakt">Kontakt</a>
   </header>
 
   <main>
-    <section class="hero" id="start">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Bewerbung · Senior Digital Marketing</p>
-        <h1>Strategie, die<br><em>Wirkung zeigt.</em></h1>
-        <p class="hero-lead">SEO, Paid, Content, Daten und KI entfalten ihre Wirkung erst, wenn sie zusammenspielen.</p>
+    <section class="hero section-shell" id="start">
+      <div class="hero-copy">
+        <p class="eyebrow">Senior Digital Marketing Managerin</p>
+        <h1>Strategie, die<br>Wirkung zeigt.</h1>
+        <p class="hero-lead">SEO, Paid, Content, Daten und KI entfalten ihre Wirkung erst, wenn sie zusammenarbeiten.</p>
         <p class="hero-sub">Genau diese Verbindung möchte ich bei Pickware gestalten.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#match">Meine Gedanken für Pickware <span>→</span></a><a class="text-link" href="assets/Lebenslauf_Jessica_Alexopoulos.pdf" target="_blank" rel="noopener">Lebenslauf ansehen ↗</a></div>
-        <div class="facts" aria-label="Kurzprofil">
-          <div><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span><strong>11+ Jahre</strong> Erfahrung</span></div>
-          <div><svg aria-hidden="true"><use href="#icon-chart"></use></svg><span><strong>SEO · SEA · AI</strong> Analytics</span></div>
-          <div><svg aria-hidden="true"><use href="#icon-team"></use></svg><span><strong>Strategie &</strong> Umsetzung</span></div>
+        <div class="hero-actions">
+          <a class="primary-button" href="#ideen">Meine Gedanken für Pickware <span>→</span></a>
+          <a class="text-button" href="assets/Lebenslauf_Jessica_Alexopoulos.pdf" target="_blank" rel="noopener">Lebenslauf ansehen ↗</a>
+        </div>
+        <div class="facts">
+          <div><span class="fact-icon">▣</span><p><strong>11+ Jahre</strong><br>Erfahrung</p></div>
+          <div><span class="fact-icon">↗</span><p><strong>SEO · SEA · AI</strong><br>Analytics</p></div>
+          <div><span class="fact-icon">◎</span><p><strong>Strategie &</strong><br>Umsetzung</p></div>
         </div>
       </div>
-      <div class="hero-media reveal"><img src="assets/jessica-portrait.jpg" alt="Jessica Alexopoulos"><div class="photo-note"><span>Senior SEO Projektmanagerin</span><strong>Digital Marketing mit Blick fürs Ganze</strong></div></div>
+      <div class="hero-image"><img src="assets/jessica-portrait.jpg" alt="Jessica Alexopoulos"></div>
     </section>
 
-    <section class="section why" id="warum">
-      <div class="section-heading reveal"><p class="section-kicker">01 · Warum Pickware?</p><h2>Ein Umfeld, in dem meine Erfahrung <em>zusammenkommt.</em></h2></div>
+    <section class="why section-shell section-band" id="warum">
+      <div class="section-title"><h2>Warum Pickware?</h2><span></span></div>
       <div class="why-grid">
-        <article class="why-card reveal"><svg aria-hidden="true"><use href="#icon-cart"></use></svg><h3>E-Commerce</h3><p>Erklärungsbedürftige Produkte verständlich machen und Customer Journeys messbar verbessern.</p></article>
-        <article class="why-card reveal"><svg aria-hidden="true"><use href="#icon-cube"></use></svg><h3>SaaS</h3><p>Digitale Produkte strategisch weiterentwickeln und Wachstum über mehrere Kanäle ermöglichen.</p></article>
-        <article class="why-card reveal"><svg aria-hidden="true"><use href="#icon-spark"></use></svg><h3>Gestaltung</h3><p>Nicht nur verwalten, sondern aufbauen, priorisieren und echten Marketing-Impact schaffen.</p></article>
+        <article><div class="round-icon">🛒</div><h3>E-Commerce</h3><p>Komplexe Produkte verständlich machen und Customer Journeys messbar verbessern.</p></article>
+        <article><div class="round-icon">◫</div><h3>SaaS</h3><p>Digitale Produkte strategisch weiterentwickeln und Wachstum ermöglichen.</p></article>
+        <article><div class="round-icon">✦</div><h3>Gestaltung</h3><p>Nicht verwalten. Sondern aufbauen, optimieren und echten Impact schaffen.</p></article>
       </div>
     </section>
 
-    <section class="section match" id="match">
-      <div class="match-side reveal"><p class="section-kicker light">02 · Match</p><h2>6 direkte<br><em>Matches.</em></h2><p>Pickware sucht. Ich liefere. Hier trifft euer Anforderungsprofil auf meine Erfahrung.</p><button class="outline-button" type="button" id="toggleDetails">Details einblenden <span>⌄</span></button></div>
-      <div class="match-list reveal">
-        <article class="match-row"><svg><use href="#icon-search"></use></svg><div><strong>SEO & GEO</strong><p>11+ Jahre SEO - von technischer Analyse bis GAIO/AIO</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> SEO-Strategien, technische und inhaltliche Optimierung sowie aktuelle Beratung zu KI-Sichtbarkeit.</div></article>
-        <article class="match-row"><svg><use href="#icon-chart"></use></svg><div><strong>Performance Marketing</strong><p>SEA, Paid Social, Display & Conversion</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> Operative Kampagnensteuerung, Budgetverantwortung, Landingpages und kontinuierliche Optimierung.</div></article>
-        <article class="match-row"><svg><use href="#icon-pie"></use></svg><div><strong>Strategie & Analytics</strong><p>Datenbasierte Entscheidungen und klare Priorisierung</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> Von Analyse und Roadmap bis Reporting, Ableitung und Umsetzung konkreter Maßnahmen.</div></article>
-        <article class="match-row"><svg><use href="#icon-spark"></use></svg><div><strong>AI-First</strong><p>Eigenes KI-Projekt und Prozessautomatisierung</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> Eigene KI-Produktentwicklung, GAIO/AIO und KI-gestützte Workflows im Marketingalltag.</div></article>
-        <article class="match-row"><svg><use href="#icon-team"></use></svg><div><strong>Projektmanagement</strong><p>Internationale Projekte, Teams, Agentur und Inhouse</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> Relaunches, mehrere parallele Kundenprojekte, Stakeholder, Timings und externe Partner.</div></article>
-        <article class="match-row"><svg><use href="#icon-globe"></use></svg><div><strong>Sprachen</strong><p>Deutsch muttersprachlich und Englisch C1</p></div><span class="status">Erfüllt</span><span class="check">✓</span><div class="match-detail"><b>Bezug:</b> Mehrjährige Arbeit in internationalen B2B-Projekten und sichere Kommunikation auf Englisch.</div></article>
+    <section class="match section-shell" id="match">
+      <div class="match-intro">
+        <div class="section-title"><h2>6 direkte Matches</h2><span></span></div>
+        <p>Pickware sucht. Ich liefere. Hier trifft euer Anforderungsprofil auf meine Erfahrung.</p>
+        <button id="toggleDetails" class="outline-button">Details ansehen <span>⌄</span></button>
+      </div>
+      <div class="match-table">
+        <article><span class="row-icon">⌕</span><strong>SEO & GEO</strong><p>11+ Jahre SEO – von technischer Analyse bis GAIO/AIO</p><b>Erfüllt</b><i>✓</i><div class="detail">Strategie, technische und inhaltliche Optimierung sowie aktuelle Beratung zu Sichtbarkeit in KI-Systemen.</div></article>
+        <article><span class="row-icon">▥</span><strong>Performance Marketing</strong><p>SEO, SEA, Paid Social, Display & Conversion</p><b>Erfüllt</b><i>✓</i><div class="detail">Operative Kampagnensteuerung, Landingpages, Budgets und datenbasierte Optimierung.</div></article>
+        <article><span class="row-icon">◔</span><strong>Strategie & Analytics</strong><p>Datengetriebene Entscheidungen & klare Priorisierung</p><b>Erfüllt</b><i>✓</i><div class="detail">Analyse, Roadmaps, Reporting und Übersetzung von Daten in konkrete nächste Schritte.</div></article>
+        <article><span class="row-icon">✦</span><strong>AI-First</strong><p>Eigenes KI-Projekt & Prozessautomatisierung</p><b>Erfüllt</b><i>✓</i><div class="detail">Eigene Produktpraxis, GAIO/AIO und KI-gestützte Marketing-Workflows.</div></article>
+        <article><span class="row-icon">◎</span><strong>Projektmanagement</strong><p>Internationale Projekte, Teams & Agentur + Inhouse</p><b>Erfüllt</b><i>✓</i><div class="detail">Relaunches, mehrere parallele Projekte, Stakeholder, Timings und externe Partner.</div></article>
+        <article><span class="row-icon">◉</span><strong>Sprachen</strong><p>Deutsch (Muttersprache) & Englisch (C1)</p><b>Erfüllt</b><i>✓</i><div class="detail">Langjährige internationale B2B-Kommunikation und sichere Zusammenarbeit auf Englisch.</div></article>
       </div>
     </section>
 
-    <section class="section topics" id="themen">
-      <div class="section-heading compact reveal"><p class="section-kicker">03 · Themen</p><h2>Themen, die ich bei Pickware <em>priorisieren würde.</em></h2><p>Leicht zugänglich, klar gegliedert und mit Potenzial für Suche, Social Media, Podcast und Leadgenerierung.</p></div>
+    <section class="topics section-shell" id="ideen">
+      <div class="section-title wide"><h2>Themen, die ich bei Pickware priorisieren würde</h2><span></span></div>
       <div class="topic-grid">
-        <button class="topic-card reveal" data-topic="news"><svg><use href="#icon-megaphone"></use></svg><span>News</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="stories"><svg><use href="#icon-team"></use></svg><span>Kundenstorys</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="erp"><svg><use href="#icon-cube"></use></svg><span>Warenwirtschaft</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="lager"><svg><use href="#icon-warehouse"></use></svg><span>Lager</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="versand"><svg><use href="#icon-truck"></use></svg><span>Versand</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="kasse"><svg><use href="#icon-card"></use></svg><span>Kassensystem</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="recht"><svg><use href="#icon-scale"></use></svg><span>Rechtliches</span><b>→</b></button>
-        <button class="topic-card reveal" data-topic="ecommerce"><svg><use href="#icon-cart"></use></svg><span>E-Commerce</span><b>→</b></button>
+        <button data-topic="news"><span>⌁</span><strong>News</strong><b>→</b></button>
+        <button data-topic="stories"><span>♙</span><strong>Kundenstorys</strong><b>→</b></button>
+        <button data-topic="erp"><span>◫</span><strong>Warenwirtschaft</strong><b>→</b></button>
+        <button data-topic="lager"><span>⌂</span><strong>Lager</strong><b>→</b></button>
+        <button data-topic="versand"><span>▱</span><strong>Versand</strong><b>→</b></button>
+        <button data-topic="kasse"><span>▤</span><strong>Kassensystem</strong><b>→</b></button>
+        <button data-topic="recht"><span>⚖</span><strong>Rechtliches</strong><b>→</b></button>
+        <button data-topic="ecommerce"><span>🛒</span><strong>E-Commerce</strong><b>→</b></button>
       </div>
-      <div class="topic-detail" id="topicDetail" aria-live="polite"><span>THEMENIDEE</span><h3 id="topicTitle">Ein Thema auswählen</h3><p id="topicText">Mit einem Klick öffnet sich eine erste kurze Idee zur möglichen inhaltlichen Ausrichtung.</p></div>
+      <div class="topic-detail" id="topicDetail">
+        <span>THEMENIDEE</span><h3 id="topicTitle">Ein Thema auswählen</h3><p id="topicText">Mit einem Klick öffnet sich eine kurze Idee zur möglichen inhaltlichen Ausrichtung.</p>
+      </div>
     </section>
 
-    <section class="section process" id="arbeitsweise">
-      <div class="section-heading reveal"><p class="section-kicker">04 · Arbeitsweise</p><h2>Von der Beobachtung zur <em>Priorität.</em></h2></div>
-      <div class="process-grid"><article class="process-card reveal"><span>01</span><h3>Verstehen</h3><p>Ziele, Zielgruppen, Daten, Ressourcen und aktuelle Prozesse erfassen.</p></article><article class="process-card reveal"><span>02</span><h3>Priorisieren</h3><p>Wirkung, Aufwand und Abhängigkeiten sichtbar und entscheidbar machen.</p></article><article class="process-card reveal"><span>03</span><h3>Umsetzen</h3><p>Quick Wins realisieren und strategische Maßnahmen sauber aufbauen.</p></article><article class="process-card reveal"><span>04</span><h3>Lernen</h3><p>Ergebnisse messen, transparent machen und konsequent weiterentwickeln.</p></article></div>
+    <section class="work section-shell" id="arbeitsweise">
+      <div class="work-image" aria-hidden="true"></div>
+      <blockquote><span>“</span><p>Nicht mehr Maßnahmen.<br>Mehr Klarheit darüber, welche Maßnahmen wirklich wirken.</p><footer>Das ist mein Anspruch an digitales Marketing.</footer></blockquote>
+      <div class="download"><span>⇩</span><p>Meine vollständigen Bewerbungsunterlagen</p><a href="assets/Lebenslauf_Jessica_Alexopoulos.pdf" target="_blank" rel="noopener">PDF herunterladen →</a></div>
     </section>
 
-    <section class="quote-section"><div class="quote-image" role="img" aria-label="Schreibtisch mit Laptop und Notizbuch"></div><blockquote class="reveal"><span>“</span><p>Nicht mehr Maßnahmen.<br>Mehr Klarheit darüber, welche Maßnahmen wirklich wirken.</p><footer>Das ist mein Anspruch an digitales Marketing.</footer></blockquote><div class="download-card reveal"><svg><use href="#icon-download"></use></svg><p>Meine vollständigen Bewerbungsunterlagen</p><a href="assets/Lebenslauf_Jessica_Alexopoulos.pdf" target="_blank" rel="noopener">PDF herunterladen →</a></div></section>
-
-    <section class="contact" id="kontakt"><p class="section-kicker light">05 · Kontakt</p><h2>Lasst uns herausfinden,<br><em>was wir gemeinsam bewegen können.</em></h2><a class="button button-light" href="mailto:jalexopoulos88@gmail.com">Nachricht schreiben →</a><p class="contact-mail">jalexopoulos88@gmail.com</p></section>
+    <section class="contact" id="kontakt"><p>Lasst uns herausfinden, was wir gemeinsam bewegen können.</p><a href="mailto:jalexopoulos88@gmail.com">Nachricht schreiben →</a></section>
   </main>
-  <footer class="site-footer"><span>Jessica Alexopoulos</span><span>Bewerbung für Pickware · 2026</span></footer>
 
-  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h6"/></symbol><symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/><path d="m3 8 6-5 6 7 6-5"/></symbol><symbol id="icon-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="18" cy="9" r="2.5"/><path d="M3 20c0-4 2.5-7 6-7s6 3 6 7M15 14c3.5 0 6 2.5 6 6"/></symbol><symbol id="icon-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 10.5h10.7L21 7H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></symbol><symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 7 9 5 9-5M3 7v10l9 5 9-5V7M12 12v10"/></symbol><symbol id="icon-spark" viewBox="0 0 24 24"><path d="M12 2c0 5-2 8-7 10 5 2 7 5 7 10 0-5 2-8 7-10-5-2-7-5-7-10Z"/><path d="M5 3c0 2-1 3-3 4 2 1 3 2 3 4 0-2 1-3 3-4-2-1-3-2-3-4Z"/></symbol><symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></symbol><symbol id="icon-pie" viewBox="0 0 24 24"><path d="M11 2a9 9 0 1 0 9 9h-9V2Z"/><path d="M14 2.5A8.5 8.5 0 0 1 21.5 10H14V2.5Z"/></symbol><symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10c-3-3-4-6-4-10s1-7 4-10Z"/></symbol><symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="M3 11v4h4l9 5V6l-9 5H3Z"/><path d="M7 15v5h4M19 9c1 1 2 2 2 4s-1 3-2 4"/></symbol><symbol id="icon-warehouse" viewBox="0 0 24 24"><path d="m3 9 9-6 9 6v12H3V9Z"/><path d="M7 21v-8h10v8M7 16h10"/></symbol><symbol id="icon-truck" viewBox="0 0 24 24"><path d="M3 5h11v11H3zM14 9h4l3 4v3h-7z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></symbol><symbol id="icon-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h5"/></symbol><symbol id="icon-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 6h14M4 21h16"/><path d="m5 6-3 6h6L5 6Zm14 0-3 6h6l-3-6Z"/></symbol><symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
-  </svg>
   <script src="script.js"></script>
 </body>
 </html>
