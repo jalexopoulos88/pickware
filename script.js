@@ -9,3 +9,13 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 items.forEach(el => observer.observe(el));
+
+
+// Bubble details also work by tap on mobile
+document.querySelectorAll('.skill-bubble').forEach((bubble) => {
+  bubble.addEventListener('click', () => {
+    const wasActive = bubble.classList.contains('active');
+    document.querySelectorAll('.skill-bubble.active').forEach((item) => item.classList.remove('active'));
+    if (!wasActive) bubble.classList.add('active');
+  });
+});
