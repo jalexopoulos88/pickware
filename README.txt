@@ -1,13 +1,9 @@
-UPLOAD AUF GITHUB PAGES
+PICKWARE-BEWERBUNGSSEITE - GITHUB PAGES
 
-1. Entpacke den Ordner.
-2. Ersetze im GitHub-Repository die bisherigen Dateien durch:
-   - index.html
-   - styles.css
-   - script.js
-   - assets/
-3. Achte darauf, dass index.html direkt auf der obersten Ebene liegt.
-4. Commit changes anklicken.
-5. GitHub Pages aktualisiert die Seite automatisch.
+1. ZIP entpacken.
+2. Den gesamten Inhalt (index.html, styles.css, script.js und assets/) in das GitHub-Repository hochladen.
+3. index.html muss direkt im Hauptverzeichnis liegen.
+4. In GitHub unter Settings > Pages als Quelle main und /(root) auswählen.
 
-Diese Version verwendet keine Bubble- oder Kreisvisualisierung im Anforderungsabgleich.
+WICHTIG:
+Die Seite enthält einen öffentlich abrufbaren Lebenslauf. Prüfe vor Veröffentlichung, ob Telefonnummer und Anschrift darin öffentlich sichtbar sein sollen.
