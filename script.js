@@ -25,7 +25,15 @@ document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
   });
 });
 
-// Start the hero story only after the initial render, so the sequence is visible.
-window.addEventListener('load', () => {
-  window.setTimeout(() => document.documentElement.classList.add('hero-ready'), 450);
-});
+// Start the hero story after the first paint. The text remains visible if JS fails.
+const startHero = () => {
+  window.requestAnimationFrame(() => {
+    window.setTimeout(() => document.documentElement.classList.add('hero-ready'), 300);
+  });
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startHero, { once: true });
+} else {
+  startHero();
+}
