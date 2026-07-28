@@ -25,15 +25,41 @@ document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
   });
 });
 
-// Start the hero story after the first paint. The text remains visible if JS fails.
-const startHero = () => {
-  window.requestAnimationFrame(() => {
-    window.setTimeout(() => document.documentElement.classList.add('hero-ready'), 300);
-  });
-};
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', startHero, { once: true });
+// Animate the hero with the Web Animations API. The text stays visible if
+// JavaScript is blocked or the browser does not support the API.
+function startHeroStory() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const sequence = [
+    ...document.querySelectorAll('.hero-sequence span'),
+    document.querySelector('.hero-thesis'),
+    ...document.querySelectorAll('.hero-story span'),
+    document.querySelector('.hero-actions')
+  ].filter(Boolean);
+
+  if (!sequence.length || typeof sequence[0].animate !== 'function') return;
+
+  const delays = [300, 1350, 2400, 3550, 4550, 5250, 5950, 6650, 7550];
+
+  sequence.forEach((element, index) => {
+    element.animate(
+      [
+        { opacity: 0, transform: 'translateY(16px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ],
+      {
+        duration: index < 3 ? 900 : 700,
+        delay: delays[index] ?? index * 800,
+        easing: 'cubic-bezier(.2,.8,.2,1)',
+        fill: 'both'
+      }
+    );
+  });
+}
+
+if (document.readyState === 'complete') {
+  window.setTimeout(startHeroStory, 150);
 } else {
-  startHero();
+  window.addEventListener('load', () => window.setTimeout(startHeroStory, 150), { once: true });
 }

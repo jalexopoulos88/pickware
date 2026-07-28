@@ -175,3 +175,17 @@ button{font:inherit}
     transform:none!important;
   }
 }
+
+/* v11 — robust hero text: always visible without JavaScript, animated via Web Animations API */
+.hero-sequence span,
+.hero-thesis,
+.hero-story span,
+.hero-actions,
+.hero-ready .hero-sequence span,
+.hero-ready .hero-thesis,
+.hero-ready .hero-story span,
+.hero-ready .hero-actions {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
