@@ -1,6 +1,28 @@
-const toggle=document.getElementById('toggleDetails');
-const table=document.querySelector('.match-table');
-toggle?.addEventListener('click',()=>{table.classList.toggle('open');toggle.innerHTML=table.classList.contains('open')?'Details schließen <span>⌃</span>':'Details ansehen <span>⌄</span>';});
-const topics={news:['News & Aktualität','Relevante Entwicklungen früh besetzen und daraus suchstarken, teilbaren Content entwickeln.'],stories:['Kundenstorys','Erfolge konkreter Brands als glaubwürdige Proof Points für Website, Social, Sales und Podcast nutzen.'],erp:['Warenwirtschaft','Suchintentionen rund um ERP, Prozesse und Wachstum strukturiert über Themencluster abdecken.'],lager:['Lager','Operative Probleme verständlich erklären und Lösungen entlang echter Arbeitsabläufe sichtbar machen.'],versand:['Versand','Content entlang von Effizienz, Fehlervermeidung und Skalierung entwickeln.'],kasse:['Kassensystem','Online und stationär als zusammenhängende Customer Journey erzählen.'],recht:['Rechtliches','Komplexe Themen verständlich, aktuell und vertrauensbildend aufbereiten.'],ecommerce:['E-Commerce','Strategische Inhalte rund um Wachstum, Prozesse, Conversion und Automatisierung bündeln.']};
-const detail=document.getElementById('topicDetail');
-document.querySelectorAll('.topic-grid button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.topic-grid button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const [title,text]=topics[btn.dataset.topic];document.getElementById('topicTitle').textContent=title;document.getElementById('topicText').textContent=text;detail.classList.add('show');}));
+const progress = document.querySelector('.progress span');
+function updateProgress() {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const value = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  progress.style.width = `${value}%`;
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.accordion-item').forEach((entry) => {
+      entry.classList.remove('open');
+      const button = entry.querySelector('.accordion-trigger');
+      button.setAttribute('aria-expanded', 'false');
+      button.querySelector('i').textContent = '+';
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+      trigger.querySelector('i').textContent = '−';
+    }
+  });
+});
