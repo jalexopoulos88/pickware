@@ -24,3 +24,8 @@ document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
     trigger.querySelector('i').textContent = '−';
   });
 });
+
+// Start the hero story only after the initial render, so the sequence is visible.
+window.addEventListener('load', () => {
+  window.setTimeout(() => document.documentElement.classList.add('hero-ready'), 450);
+});

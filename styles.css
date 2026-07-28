@@ -117,3 +117,121 @@ button{font:inherit}
   animation-duration:.9s;
   animation-delay:7.65s;
 }
+
+/* v8 — reviewed hero correction */
+.hero-copy{
+  padding:clamp(58px,6.5vw,96px) clamp(30px,5vw,76px);
+}
+.hero-sequence{
+  font-size:clamp(2.35rem,4.05vw,4.35rem);
+  line-height:1.01;
+  letter-spacing:-.03em;
+}
+.hero-portrait{
+  min-height:620px;
+  background:#ededed;
+}
+.hero-portrait img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  transform:none;
+  filter:grayscale(100%);
+}
+
+/* Start the sequence only after the page and fonts are visible. */
+.js .hero-sequence span,
+.js .hero-thesis,
+.js .hero-story span,
+.js .hero-actions{
+  animation:none;
+  opacity:0;
+}
+.js .hero-sequence span{transform:translateY(18px)}
+.js .hero-story span{transform:translateY(10px)}
+.js .hero-ready .hero-sequence span{
+  animation:revealLine .95s forwards cubic-bezier(.2,.8,.2,1);
+}
+.js .hero-ready .hero-sequence span:nth-child(1){animation-delay:0s}
+.js .hero-ready .hero-sequence span:nth-child(2){animation-delay:.9s}
+.js .hero-ready .hero-sequence span:nth-child(3){animation-delay:1.8s}
+.js .hero-ready .hero-thesis{animation:fadeUp .9s 2.85s forwards}
+.js .hero-ready .hero-story span{animation:fadeUp .78s forwards cubic-bezier(.2,.8,.2,1)}
+.js .hero-ready .hero-story span:nth-child(1){animation-delay:3.75s}
+.js .hero-ready .hero-story span:nth-child(2){animation-delay:4.4s}
+.js .hero-ready .hero-story span:nth-child(3){animation-delay:5.05s}
+.js .hero-ready .hero-story span:nth-child(4){animation-delay:5.7s}
+.js .hero-ready .hero-actions{animation:fadeUp .8s 6.65s forwards}
+
+@media(max-width:1050px){
+  .hero-sequence{font-size:clamp(2.55rem,7vw,4rem)}
+  .hero-portrait{min-height:560px;max-height:none}
+  .hero-portrait img{object-position:center 18%}
+}
+@media(max-width:680px){
+  .hero-sequence{font-size:clamp(2.15rem,10vw,3rem);line-height:1.04}
+  .hero-copy{padding:52px 22px 44px}
+  .hero-thesis{margin-top:30px;font-size:1.05rem}
+  .hero-story{font-size:.9rem}
+  .hero-portrait{min-height:500px}
+  .hero-portrait img{object-position:center top}
+}
+
+/* v9 — reduced, calmer hero; collaboration label remains in navigation */
+.hero{
+  grid-template-columns:minmax(0,1.04fr) minmax(440px,.96fr);
+}
+.hero-copy{
+  padding:clamp(52px,6vw,88px) clamp(32px,5vw,72px);
+}
+.hero-sequence{
+  font-size:clamp(2.15rem,3.45vw,3.75rem);
+  line-height:1.045;
+  letter-spacing:-.026em;
+  max-width:760px;
+}
+.hero-thesis{
+  margin-top:32px;
+  font-size:clamp(1rem,1.2vw,1.18rem);
+}
+.hero-story{
+  max-width:650px;
+  margin-top:24px;
+  padding-top:22px;
+  font-size:.9rem;
+  line-height:1.72;
+}
+.hero-actions{
+  margin-top:28px;
+}
+.hero-portrait{
+  min-height:600px;
+  overflow:hidden;
+  background:#ededed;
+}
+.hero-portrait img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:right center;
+  transform:none;
+  filter:grayscale(100%);
+}
+
+@media(max-width:1050px){
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:54px clamp(26px,7vw,72px) 48px}
+  .hero-sequence{font-size:clamp(2.25rem,6vw,3.6rem);max-width:720px}
+  .hero-portrait{min-height:auto;aspect-ratio:16/10}
+  .hero-portrait img{object-fit:contain;object-position:center center}
+}
+
+@media(max-width:680px){
+  .hero-copy{padding:44px 22px 40px}
+  .hero-sequence{font-size:clamp(2rem,9.5vw,2.75rem);line-height:1.06}
+  .hero-thesis{margin-top:25px;font-size:1rem}
+  .hero-story{font-size:.88rem;line-height:1.68}
+  .hero-portrait{min-height:auto;aspect-ratio:4/5}
+  .hero-portrait img{object-fit:contain;object-position:center top}
+}
