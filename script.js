@@ -10,7 +10,7 @@ updateProgress();
 document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
   trigger.addEventListener('click', () => {
     const item = trigger.closest('.accordion-item');
-    const isOpen = item.classList.contains('open');
+    if (item.classList.contains('open')) return;
 
     document.querySelectorAll('.accordion-item').forEach((entry) => {
       entry.classList.remove('open');
@@ -19,10 +19,8 @@ document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
       button.querySelector('i').textContent = '+';
     });
 
-    if (!isOpen) {
-      item.classList.add('open');
-      trigger.setAttribute('aria-expanded', 'true');
-      trigger.querySelector('i').textContent = '−';
-    }
+    item.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+    trigger.querySelector('i').textContent = '−';
   });
 });
